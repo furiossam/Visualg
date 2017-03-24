@@ -14,10 +14,14 @@ inicio
       escreval ("Isso não é um triângulo.")
    senao
         se (x = y) e (x = z) entao
-           triangulo <- ("Equilátero")
+           escreval ("Equilátero")
         senao
              se (x = y) ou (y = z) entao
-             
-        
+                escreval (" Isósceles ")
+             senao
+                  escreval (" Escaleno ")
+             fimse
+        fimse
+   fimse
 
 fimalgoritmo
