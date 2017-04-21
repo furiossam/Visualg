@@ -4,8 +4,8 @@ algoritmo "semnome"
 // Data : 20/04/2017
 // Seção de Declarações 
 var
-   opcao,sbt4,cultura5,band9,globo12,cont,n,desligada:inteiro
-   audi4,audi5,audi9,audi12,audidesl:real
+   opcao,sbt4,cultura5,band9,globo12,cont,n,desligada,pessoas,totalpessoas:inteiro
+   audi4,audi5,audi9,audi12:real
 inicio
 // Seção de Comandos
    cont <- 0
@@ -20,31 +20,42 @@ inicio
         leia (opcao)
         escolha (opcao)
              caso 4
-                  sbt4 <- sbt4 + 1
+                  escreval ("Pessoas assistindo?")
+                  leia (pessoas)
+                  sbt4 <- sbt4 + pessoas
                   cont <- cont + 1
              caso 5
-                  cultura5 <- cultura5 + 1
+                  escreval ("Pessoas assistindo?")
+                  leia (pessoas)
+                  cultura5 <- cultura5 + pessoas
                   cont <- cont + 1
              caso 9
-                  band9 <- band9 + 1
+                  escreval ("Pessoas assistindo?")
+                  leia (pessoas)
+                  band9 <- band9 + pessoas
                   cont <- cont + 1
              caso 12
-                  globo12 <- globo12 + 1
+                  escreval ("Pessoas assistindo?")
+                  leia (pessoas)
+                  globo12 <- globo12 + pessoas
                   cont <- cont + 1
              outrocaso
-                  desligada <- desligada + 1
+                  escreval ("Tv desligada")
                   cont <- cont + 1
         fimescolha
    fimenquanto
-   audi4 <- (sbt4/n)*100
-   audi5 <- (cultura5/n)*100
-   audi9 <- (band9/n)*100
-   audi12 <- (globo12/n)*100
-   audidesl <- (desligada/n)*100
-   escreval ("A audiencia foi de:")
-   escreval ("Canal 4: ",audi4,"%")
-   escreval ("Canal 5: ",audi5,"%")
-   escreval ("Canal 9: ",audi9,"%")
-   escreval ("Canal 12: ",audi12,"%")
-   escreval ("TVs desligadas: ",audidesl,"%")
+   totalpessoas <- sbt4 + cultura5 + band9 + globo12
+   se (totalpessoas > 0) entao
+      audi4 <- (sbt4/totalpessoas)*100
+      audi5 <- (cultura5/totalpessoas)*100
+      audi9 <- (band9/totalpessoas)*100
+      audi12 <- (globo12/totalpessoas)*100
+      escreval ("A audiencia foi de:")
+      escreval ("Canal 4: ",audi4,"%")
+      escreval ("Canal 5: ",audi5,"%")
+      escreval ("Canal 9: ",audi9,"%")
+      escreval ("Canal 12: ",audi12,"%")
+   senao
+      escreval ("Pesquisa inválida, ninguém participou.")
+   fimse
 fimalgoritmo
