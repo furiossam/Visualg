@@ -12,7 +12,7 @@ inicio
    repita
       escreval("Digite o número de entradas")
       leia(n)
-   ate (n>0) e (n<=15)
+   ate (n>1) e (n<=15)
    para posi de 1 ate n faca
       escreval ("Digite o número")
       leia(V[posi])
