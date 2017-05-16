@@ -4,9 +4,9 @@ algoritmo "exercicio4"
 // Data : 14/05/2017
 // Seção de Declarações 
 var
-   V:vetor [1..15] de inteiro
-   W:vetor [1..15] de inteiro
-   ortogonal,n,i,mult:inteiro
+   V,W:vetor [1..15] de real
+   ortogonal,mult:real
+   n,i:inteiro
 inicio
 // Seção de Comandos
    repita

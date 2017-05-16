@@ -31,7 +31,7 @@ inicio
         renda[c]<-renda[c]+r
    fimpara
    para i de 1 ate 42 faca
-        se praia[i] > 0 entao
+        se praia[i] > 1 entao
            renda[i]<-renda[i]/praia[i]
         fimse
         escreval ("Praia: ",i," Quantidade de turistas: ",praia[i]," Renda média: ",renda[i])

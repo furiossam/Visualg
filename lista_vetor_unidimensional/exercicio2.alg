@@ -5,29 +5,25 @@ algoritmo "semnome"
 // Seção de Declarações 
 var
    n,posi:inteiro
-   V:vetor[1..10] de Real
+   V,VS:vetor[1..10] de Real
 
 inicio
 // Seção de Comandos
    repita
       escreval("Digite o número de entradas")
       leia(n)
-   ate (n>1) e (n<=15)
+   ate (n>1) e (n<=10)
    para posi de 1 ate n faca
       escreval ("Digite o número")
       leia(V[posi])
    fimpara
-   escreval ("Vetor original")
-   para posi de 1 ate n faca
-      escreva (" ",V[posi])
-   fimpara
-   escreval
-   escreval ("Vetor suavizado")
-   escreva (V[1]," ")
+   VS[1]<-V[1]
    para posi de 2 ate n-1 faca
-        V[posi]<-(V[posi-1]+V[posi]+V[posi+1])/3
-        escreva (V[posi]," ")
+        VS[posi]<- (V[posi-1]+V[posi]+V[posi+1])/3
    fimpara
-   escreva (V[n])
-   
+   VS[n]<-V[n]
+   escreval ("Novo Vetor")
+   para posi de 1 ate n faca
+        escreva(VS[posi])
+   fimpara
 fimalgoritmo

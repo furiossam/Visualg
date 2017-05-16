@@ -4,8 +4,7 @@ algoritmo "exercicio7"
 // Data : 15/05/2017
 // Seção de Declarações 
 var
-   altura:vetor[1..100] de inteiro
-   inscricao:vetor[1..100] de inteiro
+   altura,inscricao:vetor[1..100] de inteiro
    insmaior,insmenor,n,maior,menor,i:inteiro
    alturas,media:real
 inicio
@@ -29,11 +28,11 @@ inicio
    para i de 2 ate n faca
         se (altura[i] > maior) entao
            maior <- altura[i]
-           insmaior<-i
+           insmaior<-inscricao[i]
         senao
              se (altura[i] < menor) entao
                 menor <- altura[i]
-                insmenor<-i
+                insmenor<-inscricao[i]
              fimse
         fimse
    fimpara
